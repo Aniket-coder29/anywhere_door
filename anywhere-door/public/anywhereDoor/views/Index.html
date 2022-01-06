@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anywhere Door</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="home/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="scrolling()">
+    <header>
+        <!-- Anywhere Door -->
+        <img src="home/logo.png" id="logo" alt="logo">
+        <a href="#" class="brand">Anywhere Door</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="/login">Explore</a>
+                <a href="support.html">Support</a>
+                <a href="card.html">About Us</a>
+                <a href="/register">Signup</a>
+                <a href="/login">Login</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="home/10.mp4" autoplay muted loop> </video>
+        <video class="video-slide" src="home/12.mp4" autoplay muted loop> </video>
+        <video class="video-slide" src="home/13.mp4" autoplay muted loop> </video>
+        <video class="video-slide" src="home/16.mp4" autoplay muted loop> </video>
+        <video class="video-slide" src="home/14.mp4" autoplay muted loop> </video>
+        <div class="content active">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>Islands conjure dreams of paradise: an escape from the rat race and a perfect patch of sand where you can relax under rustling palms and gaze at a serene blue sea.
+
+                But not all islands are created the same. The beauty of some is defined more by the sea that surrounds them, which can captivate connoisseurs with its crystalline clarity and thriving coral kingdoms.<br>
+                The island life – looking up to the palm trees, feel the sand between your toes, look over a turquoise coloured ocean and feel the sun on your skin. Those are a few reasons of why we are island lovers.
+            <br><i>“Islands are natural workshops of evolution.”</i></p>
+            <a href="/register">Get Started</a>
+        </div>
+        
+        <div class="content">
+            <h1>Adventures.<br><span>Off Road</span></h1>
+            <p>Off-roading is the activity of driving or riding a vehicle on unsurfaced roads or tracks, made of
+                materials such as sand, gravel, riverbeds, mud, snow, rocks, and other natural terrain. Types of
+                off-roading range in intensity, from leisure drives with unmodified vehicles to competitions with
+                customized vehicles and professional drivers. Off-roaders have been met with criticism for the
+                environmental damage caused by their vehicles.Off-road racing is a form of motorsports consisting of
+                specially-modified vehicles (including cars, trucks, motorbikes, and buggies) racing in off-road
+                environments.</p>
+            <a href="/register">Get Started</a>
+        </div>
+       
+        <div class="content">
+            <h1>Road Trip.<br><span>Together</span></h1>
+            <p>A road trip, sometimes spelled roadtrip, is a long-distance journey on the road. Typically, road trips
+                are long distances traveled by automobile.Generally, while road trips can occur in any mass of land,
+                large masses of land are most common for road trips. A road trip is that perfect opportunity to forget
+                all your worries and make memories along the way. The Delhi-Manali-Leh road trip is one of the best road
+                trips in India and an absolutely enthralling journey to take.</p>
+            <a href="/register">Get Started</a>
+        </div>
+        <div class="content">
+            <h1>Delve.<br><span>Into Culture</span></h1>
+            <p>Indian culture is the heritage of social norms, ethical values, traditional customs, belief systems,
+                political systems, artifacts and technologies that originated in or are associated with the
+                ethno-linguistically diverse Indian subcontinent. The term also applies beyond India to countries and
+                cultures whose histories are strongly connected to India by immigration, colonization, or influence,
+                particularly in South Asia and Southeast Asia. India's languages, religions, dance, music, architecture,
+                food and customs differ from place to place within the country.</p>
+            <a href="/register">Get Started</a>
+        </div>
+        <div class="content">
+            <h1>Feel Nature.<br><span>Relax</span></h1>
+            <p>Being in nature, or even viewing scenes of nature, reduces anger, fear, and stress and increases pleasant
+                feelings. Exposure to nature not only makes you feel better emotionally, it contributes to your physical
+                wellbeing, reducing blood pressure, heart rate, muscle tension, and the production of stress
+                hormones.Make a commitment to connect with Nature. Our lives our busy, and our minds are even busier.
+                Create time alone in Nature. When we're with other people, we tend to talk to each other.</p>
+            <a href="/register">Get Started</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><img src="home/facebook.png" alt="Facebook logo"></a>
+            <a href="https://www.instagram.com/vaibhav_agg0403/" target="_blank"><img src="home/insta.png"
+                    alt="Insta logo"></a>
+            <a href="https://www.linkedin.com/in/yash-jaiswal-0391691b9/" target="_blank"><img src="home/linkedin.png" alt="linked in logo"></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    
+    
+    <script type="text/javascript">
+        // javascript of responsive navigation menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //javascript for video slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            })
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            })
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            })
+
+
+            btns[manual].classList.add("active")
+            slides[manual].classList.add("active")
+            contents[manual].classList.add("active")
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            })
+        })
+
+        function scrolling(){
+            
+            var i=1;
+            setTimeout(()=>{
+                sliderNav(1);
+                setTimeout(()=>{
+                sliderNav(2);
+                setTimeout(()=>{
+                sliderNav(3);
+                setTimeout(()=>{
+                sliderNav(4);
+                setTimeout(()=>{
+                sliderNav(0);
+                
+            },3000)
+                
+            },3000)
+                
+            },3000)
+                
+            },3000)
+            },3000)
+        }
+        // function nextslide(i){
+        //     sliderNav(i);
+        //     console.log(i);
+        //     // i=i+1;
+        // }
+        // async function scrolling(){
+            
+        //     var i=1;
+        //     await setTimeout(nextslide(i),5000);
+        //     await setTimeout(nextslide(i+1),5000);
+        //     await setTimeout(nextslide(i+2),5000);
+        //     await setTimeout(nextslide(i+3),5000);     
+            
+        //     return "all done"
+        // }
+
+        // async function scrolling(){
+        
+        //     setTimeout(nextslide,1000);
+        //     await setTimeout(nextslide,1000);
+        //     await setTimeout(nextslide,1000);
+        //     await setTimeout(nextslide,1000);     
+            
+        // }
+            
+
+    </script>
+
+</body>
+
+</html>

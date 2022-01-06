@@ -1,0 +1,156 @@
+body{
+    background: url(explore_media/explorebg.gif) #000;
+    color: aliceblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* div{
+    display: inline-block!important;
+} */
+.d1 nav{
+    position: relative;
+    display:block;
+}
+nav ul{
+    margin: 0px;
+    /* height: 5rem; */
+    /* background-color: white; */
+    overflow:visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow:inherit;
+    justify-content: space-around;
+    font-family:'Oswald','Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 550;
+    font-size: 1.5rem;
+    color: white;
+    /* padding-top: 1.2rem; */
+}
+
+nav ul a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: white;
+    opacity:.85;
+    text-decoration: none;
+}
+nav ul a:hover{
+    color: white;
+    opacity: 1;
+    transform: scale(1.2);
+    transition: 0.8s;
+}
+nav ul a:active{
+    cursor: pointer;
+    color: greenyellow;
+}
+nav{
+    margin:0;
+    padding: 0;
+}
+#logo{
+    
+    width:6rem;
+}
+
+nav ul li:nth-of-type(1){
+    width: 50%;
+    display: flex; align-items: center; align-content: center;
+}
+
+#search{
+    text-decoration: none;
+}
+#search input{
+    font-size: large;
+    padding:10px;
+    /* border:1px solid #fff; */
+    color:#fff;
+    background:transparent;
+    font-size: 15px;
+    outline: 2px ridge rgba(221, 203, 229, 0.918);
+    border-radius: 2rem;
+    margin-right: 6px;
+    /* border-width: 2px; */
+}
+#search button {
+    font-size: large;
+    background: none;
+    border:none;
+    padding:2px;
+}
+#search img{
+    width: 2.5rem;
+}
+/* .places{
+    display: inline;
+	text-align: center;
+	border-radius: 12px;
+} */
+/* .places h2{
+    color: red;
+	font-size: 35px;
+	letter-spacing: 3px;
+	border-radius: 1px;
+	padding: 30px 30px;
+	background-color: #000;
+} */
+/* .places a{
+    text-decoration: none;
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 12px;
+	padding: 12px 30px;
+	background-color: #fff;
+}
+.places a:hover{
+    background-color: #000;
+	letter-spacing: 3px;
+	transition: 0.6s; */
+    /* } */
+    .footer{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aliceblue;
+        
+    }
+    .footer a{
+        text-decoration: none;
+        color: green;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .footer a:hover{
+        text-decoration: underline;
+        transition: 0.4s;
+    }
+    .main{
+        /* background-color: yellow; */
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .tours{
+        /* background-color: rgba(255, 255, 255, 0.678); */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+
+    }
+    
+    /* .para{
+        overflow-y:scroll;
+    } */

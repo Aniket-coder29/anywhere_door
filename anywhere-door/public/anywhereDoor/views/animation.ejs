@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>EXPLORE</title>
+  <link rel="shortcut icon" href="media/logo.png" type="image/x-icon">
+
+  <style type="text/css" media="screen">
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Lucida Grande', Verdana, Arial;
+      font-size: 12px;
+      /* background-image: -webkit-gradient(radial,
+                            50% 500, 1,
+                            50% 500, 400,
+                            from(rgba(255, 255, 255, 0.3)),
+                            to(rgba(255, 255, 255, 0))); */
+                            background-image: url("explore_media/animation.gif");
+                            background-repeat: repeat;
+                            
+     /* border-image-width: 100%; */
+     /* background-image: url("home/pexels-pixabay-355465.jpg"); */
+    }
+
+    #container {
+      width: 100%;
+      height: 700px;
+      -webkit-perspective: 800;
+       /* For compatibility with iPhone 3.0, we leave off the units here */
+      -webkit-perspective-origin: 50% 225px;
+    }
+    #stage {
+      width: 100%;
+      height: 100%;
+      -webkit-transition: -webkit-transform 2s;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    #shape {
+      position: relative;
+      top: 160px;
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      -webkit-transform-style: preserve-3d;
+    }
+    img{
+        opacity: 80%;
+        width: 196px;
+        height: 196px;
+        border-radius: inherit;
+    }
+
+
+    .plane {
+        /* make this relative to see magic */
+        position: absolute;
+      height: 200px;
+      width: 200px;
+      border: 2px solid pink;
+      box-sizing: border-box;
+      -webkit-border-radius: 12px;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 124pt;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: visible;
+    }
+
+    /* #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    } */
+    
+    #shape {
+      -webkit-animation: spin 10s infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+
+    /* ---------- cube styles ------------- */
+    .cube > .one {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+    }
+
+    .cube > .two {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+    }
+
+    .cube > .three {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .four {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .five {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .six {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+    }
+
+
+    .cube > .seven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+    }
+
+    .cube > .eight {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    }
+
+    .cube > .nine {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .ten {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .eleven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .twelve {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+    }
+
+    /* ---------- ring styles ------------- */
+    .ring > .one {
+      -webkit-transform: translateZ(380px);
+    }
+
+    .ring > .two {
+      -webkit-transform: rotateY(30deg) translateZ(380px);
+    }
+
+    .ring > .three {
+      -webkit-transform: rotateY(60deg) translateZ(380px);
+    }
+
+    .ring > .four {
+      -webkit-transform: rotateY(90deg) translateZ(380px);
+    }
+
+    .ring > .five {
+      -webkit-transform: rotateY(120deg) translateZ(380px);
+    }
+
+    .ring > .six {
+      -webkit-transform: rotateY(150deg) translateZ(380px);
+    }
+
+    .ring > .seven {
+      -webkit-transform: rotateY(180deg) translateZ(380px);
+    }
+
+    .ring > .eight {
+      -webkit-transform: rotateY(210deg) translateZ(380px);
+    }
+
+    .ring > .nine {
+      -webkit-transform: rotateY(-120deg) translateZ(380px);
+    }
+
+    .ring > .ten {
+      -webkit-transform: rotateY(-90deg) translateZ(380px);
+    }
+
+    .ring > .eleven {
+      -webkit-transform: rotateY(300deg) translateZ(380px);
+    }
+
+    .ring > .twelve {
+      -webkit-transform: rotateY(330deg) translateZ(380px);
+    }
+
+    .controls {
+      text-align: center;
+      font-size: 1.5rem ;
+      width: 50%;
+      margin:auto auto;
+      padding: 5px 20px;
+      border-radius: 12px;
+      background-color: rgba(0, 0,0, 0.5);
+    }
+    .controls > a {
+      text-decoration: none;
+      color: white;
+      cursor:pointer;
+      margin: 10px;
+    }
+    .controls a:hover{
+    /* text-decoration: none; */
+    /* color: black; */
+    opacity: 0.8;
+    transform: scale(1.2) ;
+    transition: 0.8s;
+  }
+  a{
+    text-decoration: none;
+    color:white;
+  }
+  </style>
+  <script type="text/javascript" charset="utf-8">
+    function hasClassName(inElement, inClassName)
+    {
+        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+        return regExp.test(inElement.className);
+    }
+
+    function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
+
+    function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
+
+    function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
+
+    function toggleShape()
+    {
+      var shape = document.getElementById('shape');
+      if (hasClassName(shape, 'ring')) {
+        removeClassName(shape, 'ring');
+        addClassName(shape, 'cube');
+      } else {
+        removeClassName(shape, 'cube');
+        addClassName(shape, 'ring');
+      }
+      
+      // Move the ring back in Z so it's not so in-your-face.
+    //   var stage = document.getElementById('stage');
+    //   if (hasClassName(shape, 'ring'))
+    //     stage.style.webkitTransform = 'translateZ(-200px)';
+    //   else
+    //     stage.style.webkitTransform = '';
+    }
+    function start(){
+        setTimeout(toggleShape,200);
+        setTimeout(()=>{
+          window.location.href ="explore.html"
+        },5000)
+    }
+    // function toggleBackfaces()
+    // {
+    //   var backfacesVisible = document.getElementById('backfaces').checke
+    
+    //   var shape = document.getElementById('shape');
+    //   if (backfacesVisible)
+    //     addClassName(shape, 'backfaces');
+    //   else
+    //     removeClassName(shape, 'backfaces');
+    // }
+  </script>
+</head>
+<body onload="start()">
+
+  <!-- <div class="controls">
+      <a href="explore.html">EXPLORE</a><BR></BR>
+      <form action="/search" method="post">
+        <label for="location">CURRENT LOCATION :</label>
+        <input type="text" id="location" placeholder="search for location" name="location"> <button type="submit">let's go</button>
+        <br>
+        <label ><a href="explore.html"><input type="radio">use your current loction</a></label>
+      </form>
+  </div> -->
+
+  <div id="container">
+    <div id="stage">
+      <div id="shape" class="cube backfaces">
+        <div class="plane one"><img src="explore_media/gateway.jpg"></div>
+        <div class="plane two"><img src="explore_media/indiagate.webp"></div>
+        <div class="plane three"><img src="explore_media/road.jpg"></div>
+        <div class="plane four"><img src="explore_media/tajmahal.jpg"></div>
+        <div class="plane five"><img src="explore_media/victoriamemorial.jpg"></div>
+        <div class="plane six"><img src="explore_media/darjelin.jpg"></div>
+        <div class="plane seven"><img src="explore_media/fort.webp"></div>
+        <div class="plane eight"><img src="explore_media/ropeway.jpg"></div>
+        <div class="plane nine"><img src="explore_media/humayuntomb.webp"></div>
+        <div class="plane ten"><img src="explore_media/hawamahal.jpg"></div>
+        <div class="plane eleven"><img src="explore_media/goa.jpg"></div>
+        <div class="plane twelve"><img src="explore_media/redfort.jpg"></div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

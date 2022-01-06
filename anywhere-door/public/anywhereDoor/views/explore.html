@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explore</title>
+	<link rel="shortcut icon" href="media/logo.png" type="image/x-icon">
+	<!-- <script src="https://kit.fontawesome.com/14acec9d4d.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="singlecard.css">
+    <link rel="stylesheet" href="explore.css">
+	<script src="explore.js"></script>
+</head>
+
+<body onload="yash()">
+    <nav>
+        <ul>
+          <li id="name"><img src="Home/logo.png" id="logo"><span >Anywhere Door</span>
+          </li>
+          <a href="\">
+            <li>Logout</li>
+          </a>
+          <a href="support.html">
+            <li>Support</li>
+          </a>
+		  <span id="search">
+            <li>
+			   <input type="search" placeholder="search" oninput="updateResult(this.value)">	
+		 	</li>
+		  </span>
+        </ul>
+      </nav>
+      <div class="main">
+        <div class="tours">
+			<!-- <div class="view">
+				<img src="explore_media/indiagate.webp" >
+				<div class="mask">
+					<h2>india GATE</h2>
+					<p class="para"><span id="location">110km</span> The India Gate (formerly known as the All India War Memorial) is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi,[1] formerly called Kingsway. It stands as a memorial to 90,000 soldiers of the British Indian Army who died in between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War</p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			 <div class="view">
+				<img src="explore_media/tajmahal.jpg" >
+				<div class="mask">
+					<h2>TAJ MAHAL</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			<div class="view">
+				<img src="explore_media/gateway.jpg" >
+				<div class="mask">
+					<h2>GATEWAY OF INDIA</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			<div class="view">
+				<img src="explore_media/goa.jpg" >
+				<div class="mask">
+					<h2>GOA</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			<div class="view">
+				<img src="explore_media/hawamahal.jpg" >
+				<div class="mask">
+					<h2>HAWAMAHAL</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			<div class="view">
+				<img src="explore_media/humayuntomb.webp" >
+				<div class="mask">
+					<h2>HUMAYUN TOMB</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>
+			<div class="view">
+				<img src="explore_media/victoriamemorial.jpg" >
+				<div class="mask">
+					<h2>VICTORIA MEMORIAL</h2>
+					<p><span id="location"></span></p>
+					<a href="#" class="info">Read More</a>
+				</div>
+			</div>  -->
+		</div>
+		</div>
+      <!-- <div class="footer">
+		<a href="#">Copyright</a>
+		<a href="#">Terms and Conditions</a>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Cookies</a>
+		<a href="#">Complaints</a>
+	</div> -->
+	<!-- <script>
+		var locations=[
+			{
+				name:"red fort",
+				image:"https://www.transindiatravels.com/wp-content/uploads/the-red-fort-delhi.jpg",
+				address:"Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi 110006",
+				info:"Established as Shahjahanabad in 1648, The Red Fort was known as the capital of the Mughal Empire in India. Its construction is attributed to Shah Jahan who also built the famous Taj Mahal in Agra, and was also known by the name Quila Mubarak and remained the residence of the Mughal Imperial family for nearly 20 decades."
+			},
+			{
+				name:"taj mahal",
+				image:"https://www.transindiatravels.com/wp-content/uploads/the-taj-mahal-agra.jpg",
+				address:"Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001",
+				info:"The name Taj Mahal, translates to the ‘Crown Palace’ and is one of the most famous and marvelous buildings in India. Located in the city of Agra, Taj Mahal is actually a mausoleum built to house the remains of Mumtaz Mahal, the wife of Mughal Emperor Shah Jahan. The building is known for its extensive use of white marble and was completed in the mid-17th century."
+			},
+			{
+				name:"pangong lake",
+				image:"https://www.transindiatravels.com/wp-content/uploads/pangong-lake-ladakh.jpg",
+				address:"Ladakh,India",
+				info:"With its location between India and Tibet, Pangong Lake is an enchanting saltwater lake located in the Himalayas in Ladakh. The lake can be reached via a 4-5 hours’ drive from Leh via the scenic Changla Pass. Pangong Tso is known for its hypnotizing blue waters and flocks of migratory birds that can be seen here."
+			},
+			{
+				name:"Valley of Flowers",
+				image:"https://www.transindiatravels.com/wp-content/uploads/valley-of-flowers-nainital.jpg",
+				address:"Nanda devi biosphere reserve ,Nainital,Utrakhand",
+				info:"As evident by its name, the Valley of Flowers is known for its vast diversity of alpine flowering shrubs located in the western Himalayas. The place is a part of the larger Nanda Devi Biosphere Reserve in Nainital, Uttarakhand. The valley is covered with snow from October till March, but as the summer arrives, the valley is turned into a palette of colorful flowers that covers the entire landscape."
+			},
+			{
+				name:"Jaisalmer Fort",
+				image:"https://www.transindiatravels.com/wp-content/uploads/jaisalmer-fort-jaisalmer.jpg",
+				address:"Khejer Para, Manak Chowk, Amar Sagar Pol, Jaisalmer, Rajasthan 345001",
+				info:"Located amidst the golden sands of the Thar Desert, the Jaisalmer Fort was built by the Bhati Rajput King Rawal Jaisal. It remained an important trade center during the medieval era before the popularity of maritime trade centers such as Bombay and Calcutta. Today, it is one of the important tourist centers in Rajasthan known for its exquisite Rajput Architecture and scenic beauty."
+			},
+			{
+				name:"Ruins of Hampi",
+				image:"https://www.transindiatravels.com/wp-content/uploads/ruins-of-hampi-karnataka.jpg",
+				address:"Hampi, Karnataka 583239",
+				info:"Hampi was the capital of the erstwhile Vijayanagar Empire and known to be one of the richest cities of its time. Located on the shores of the Tungabhadra River in Karnataka, Hampi is also a UNESCO World Heritage Site famous for its stone carved structures, built in marvelous Dravidian style architecture, temples and monuments."
+			},
+			{
+				name:"Ghats at Varanasi",
+				image:"https://www.transindiatravels.com/wp-content/uploads/ghats-at-varanasi-uttar-pradesh.jpg",
+				address:"Chet Singh fort, Ghats of Varanasi, Shivala, Varanasi, Uttar Pradesh 221001, India",
+				info:"Also known by the names Kashi and Benares, Varanasi is said to have been continuously inhibited since the 11th century BC and is known to be the spiritual capital of India. The city is also known for its Ghats located on the banks of the Ganges River and were mostly built during the 18th century. Today, the Ghats are known to attract a large number of devotees and tourists who visit Varanasi to Pradeep Kumbhashi seek spiritual salvation."
+			},
+			{
+				name:"Backwaters",
+				image:"https://www.transindiatravels.com/wp-content/uploads/backwaters-kerala-1.jpg",
+				address:"",
+				info:"The Backwaters of Kerala are essentially a group of 5 lagoons that are linked by natural and manmade canals. These waterways were mainly used for trade during the older times and are known for their scenic beauty and a rich variety of flora, fauna, avi-fauna and marine life."
+			},
+			{
+				name:"Old Goa",
+				image:"https://www.transindiatravels.com/wp-content/uploads/old-goa-1.jpg",
+				address:"",
+				info:"Located in the Northern Goa district of Goa, Old Goa refers to the historic town that served as the seat of the Portuguese in India till the 18th century. The city is also a UNESCO World Heritage Site due to its unique Baroque style architecture and various churches"
+			},
+			{
+				name:"Umaid Bhavan Palace",
+				image:"https://www.transindiatravels.com/wp-content/uploads/umaid-bhavan-palace-jodhpur.jpg",
+				address:"",
+				info:"A marvelous example of the Indo-European architecture, the Umaid Bhavan was built during the 1920’s and is known as one of the largest private residences in the world. The palace was criticized for its expensive architecture but also helped the citizens of Jodhpur to sustain their living during a 3 year famine. It was commissioned by the 37th Rathore King Umaid Singh."
+			},
+			{
+				name:"Jama Masjid",
+				image:"https://www.transindiatravels.com/wp-content/uploads/jama-masjid-delhi.jpg",
+				address:"",
+				info:"Known formally as ‘Masjid-i-Jahan-Numa’, the Jama Masjid was built by the Mughal Emperor Shah Jahan in the mid-17th century. The mosque is built in a majestic Indo-Islamic style mainly in Red Sandstone and marble. Jama Masjid has three gateways, 2 minarets and four towers that provide it with an imposing look."
+			},
+			{
+				name:"Akshardham Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/akshardham-temple-delhi.jpg",
+				address:"",
+				info:"Inaugurated in 2005, the Akshardham temple in Delhi is known as one of the major Hindu temples in India. The structure of the temple is made from sculpted sandstone and took almost 7000 artisans to complete. The entire complex is decorated with sculpted pillars, sculptures depicting deities, sadhus and animals along with scenes from the Hindu mythology."
+			},
+			{
+				name:"Ajanta and Ellora Caves",
+				image:"https://www.transindiatravels.com/wp-content/uploads/ajanta-and-ellora-caves-aurangabad.jpg",
+				address:"",
+				info:"Ajanta and Ellora Caves in Aurangabad are rock cut Buddhist caves that date back as far as the 2nd century BC to 800 AD. The Ajanta Caves mainly consist of rock cut monuments dedicated to the ancient Buddhist traditions, while Ellora cave contain Hindu, Buddhist and Jain monuments built during the Rashtrakuta Empire."
+			},
+			{
+				name:"The Golden Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/the-golden-temple-amritsar.jpg",
+				address:"",
+				info:"Known by its formal name Harmandir Sahib, The Golden Temple is one of the most revered places of worship for the Sikh community in India. Located in the pilgrim town of Amritsar in the State of Punjab, Harmandir Sahib is known for its gilded façade and the exquisite architecture that is one of a kind among all other religious places in India."
+			},
+			{
+				name:"Charminar",
+				image:"https://www.transindiatravels.com/wp-content/uploads/charminar-hyderabad.jpg",
+				address:"",
+				info:"The Charminar or 4 Minarets is a historical monument that was built by the Qutub Shahi Dynasty during the late 16th century. Muhammad Quli Qutub Shah who was the ruler of Golkonda built the monument to commemorate the founding of the city of Hyderabad an important trade route. The structure is known for the signature 4 minarets, which are built in a marvelous Indo-Islamic style. The second floor of the structure also houses a mosque, which is also a remarkable work of medieval architecture."
+			},
+			{
+				name:"Amber Fort",
+				image:"https://www.transindiatravels.com/wp-content/uploads/amber-fort-jaipur.jpg",
+				address:"",
+				info:"The medieval town of Amer was the former capital of the Kachwaha Rajputs, with the fort serving as their seat till the 18th century. The Amber fort is not only one of the most majestic monuments in India but its scenic location and preservation makes it a major tourist attraction in Jaipur."
+			},
+			{
+				name:"Rashtrapati Bhavan",
+				image:"https://www.transindiatravels.com/wp-content/uploads/rashtrapati-bhavan-delhi.jpg",
+				address:"",
+				info:"Known during the British Raj as the Viceroy’s House, Rashtrapati Bhavan is known as the seat and residence of the President of India. The structure is built in a vast area that encompasses 320 acres of land, in a marvelous style that incorporates styles from Indian and European architecture."
+			},
+			{
+				name:"Mahabodhi Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/mahabodhi-temple-bodh-gaya.jpg",
+				address:"",
+				info:"The Mahabodhi Temple is one of the major pilgrim site for the Buddhists as it the place where Lord Buddha received enlightenment. The temple is located at a distance of 96 kilometers from Patna and is also the sight of the Bodhi Tree, the exact spot where Siddhartha Gautama meditated in around 589 BC."
+			},
+			{
+				name:"Meenakshi Amman Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/meenakshi-amman-temple-madurai.jpg",
+				address:"",
+				info:"Dedicated to the Hindu deities Parvati and Lord Shiva, Meenakshi Amman Temple in Madurai is a typical Dravidian style temple, with a prominent Gopuram that reaches almost 50 meters high. The current structure was built during the 17th century, although the temple has existed since ancient times."
+			},
+			{
+				name:"Khajuraho Temples",
+				image:"https://www.transindiatravels.com/wp-content/uploads/khajuraho-temples-chattarpur.jpg",
+				address:"",
+				info:"Located at around 175 kilometers from Jhansi, the Khajuraho Group of Temples is a UNESCO World Heritage Site built around the 1st century AD by the Chandela Rajputs. The construction of the temples is a remarkable example of the Hindu Nagara style architecture and is also famous for its sculptures depicting various deities, animals, mythical creatures and erotica."
+			},
+			{
+				name:"Elephanta Caves",
+				image:"https://www.transindiatravels.com/wp-content/uploads/elephanta-caves-mumbai.jpg",
+				address:"",
+				info:"The Elephanta Caves are located on the Elephanta Island, at a short distance of 11 kilometers from the Apollo pier in Mumbai. A UNESCO World Heritage Site, the Caves are famous for their ancient rock cut temples dedicated to the Hindu and Buddhist traditions."
+			},
+			{
+				name:"City Palace",
+				image:"https://www.transindiatravels.com/wp-content/uploads/city-palace-udaipur-1.jpg",
+				address:"",
+				info:"After leaving Chittor due to its strategic disadvantage, the Sisodiya Rajputs established their new kingdom as the city of Udaipur and made it the capital of Mewar. The construction of the City Palace was started in 1559 by Maharana Udai Singh and was improved by his successors for the next 300 years. The palace is one of the most visited monuments in India and is known for its opulent Hindu Rajput Architecture."
+			},
+			{
+				name:"Havelock Island",
+				image:"https://www.transindiatravels.com/wp-content/uploads/havelock-island-andamans.jpg",
+				address:"",
+				info:"Havelock islands are located in the Andamans at a short distance of 57 kilometers from Port Blair. The island is one of the largest in the Andamans and is known for its exquisite beaches and white sands. The shoreline is strikingly different from most other beaches found in India and is one of the few must visit exotic locations in the country."
+			},
+			{
+				name:"Tirupati, Chittoor",
+				image:"https://www.transindiatravels.com/wp-content/uploads/tirupati-chittoor.jpg",
+				address:"",
+				info:"Dedicated to Lord Venkateshwara, a form of the Hindu deity Lord Vishnu, Tirupati is regarded as the richest Hindu temple in the world and is known for its remarkable Dravidian architecture. The temple is also located atop the Tirumala hill at an elevation of 853 meters above sea level."
+			},
+			{
+				name:"Kaziranga National Park",
+				image:"https://www.transindiatravels.com/wp-content/uploads/kaziranga-national-park-assam-1.jpg",
+				address:"",
+				info:"The Kaziranga National Park is a UNESCO World Heritage Site and is known to be one of the last few strongholds of the one-horned rhinoceros. It is spread around an area of 430 sq. kilometers and is known for its varied terrain and vegetation that houses a large number of wildlife species."
+			},
+			{
+				name:"Tawang Monastery",
+				image:"https://www.transindiatravels.com/wp-content/uploads/tawang-monastery-tawang.jpg",
+				address:"",
+				info:"Known as the largest monastery in India, Tawang Monastery was founded in the 17th century, under the orders from the 5th Dalai Lama of the Tibetan Buddhist sect. The building is located at an elevation of 3000 meters above sea level and is known for its scenic views and remarkable architecture."
+			},
+			{
+				name:"Kesaria Stupa",
+				image:"https://www.transindiatravels.com/wp-content/uploads/kesaria-stupa-kesaria.jpg",
+				address:"",
+				info:"Located in Bihar, Kesaria Stupa is one the largest Buddist stupas in the world. It was built around the 2nd and 7th century AD and stands more than 300 feet in height. The stupa was also known to be visited by Lord Buddha and is also mentioned in the writings of Chinese traveller Heiun Tsang that signifies its historical importance."
+			},
+			{
+				name:"Palitana Temples",
+				image:"https://www.transindiatravels.com/wp-content/uploads/palitana-temples-bhavnagar.jpg",
+				address:"",
+				info:"The Jain temples of Palitana are located in the Bhavnagar district of Gujarat and are known for its marvelous rock sculpted exteriors. The group of temples is known to be one of the most holy pilgrimage sites for the Jain community and is located at an elevation of 603 meters, accessible through climbing around 4000 steps."
+			},
+			{
+				name:"Sun Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/sun-temple-konark.jpg",
+				address:"",
+				info:"Sun temple of Konark was built during the 13th century by the kings of the Eastern Ganga Dynasty. Known for its remarkable architecture and antiquity, the temple is built by carving large boulders of rock and resembles a large stone chariot. It is also a UNESCO World Heritage Site and is believed to be the exact spot where Lord Krishna’s son Sambha meditated to cure his leprosy."
+			},
+			{
+				name:"Rani Ki Vav",
+				image:"https://www.transindiatravels.com/wp-content/uploads/rani-ki-vav-patan.jpg",
+				address:"",
+				info:"Constructed by the king of the Solanki Dynasty in Gujarat, Rani Ki Vav in Patan, is a stone step-well that is known for its intricate carvings and architecture. The construction of the place dates back to the 11th century AD and is one of the largest step-wells in India."
+			},
+			{
+				name:"Chaturbhuj Temple",
+				image:"https://www.transindiatravels.com/wp-content/uploads/chaturbhuj-temple-orccha.jpg",
+				address:"",
+				info:"The temple is dedicated to Lord Vishnu and was constructed by the Bundela Rajputs of Madhya Pradesh around the 16th century AD. Chaturbhuj temple of Orchha is known for its remarkable architecture with tall spires, which give them an imposing look. The interiors and exteriors have also been extensively adorned with stone carvings depicting flowers, petals and geometric patterns"
+			},
+			{
+				name:"Cellular Jail",
+				image:"https://www.transindiatravels.com/wp-content/uploads/cellular-jail-port-blair.jpg",
+				address:"",
+				info:"The Cellular Jail or Kala Pani is a historic Jail that was used to incarcerate political prisoners during the British Rule in India. The construction of the prison complex dates back to the late 19th century as a response to the revolt of 1857. The jail was also designed keeping in mind that the prisoners weren’t allowed to communicate amongst themselves."
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+			{
+				name:"",
+				image:"",
+				address:"",
+				info:""
+			},
+		]
+	</script> -->
+</body>
+</html>

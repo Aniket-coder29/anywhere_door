@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anywhere Door</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="home/logo.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <video class="video" src="home/1.mp4" autoplay muted loop> </video>
+    <!-- login signup modal -->
+    <div class="login-modal1">
+        <!-- white area -->
+        <div class="modal-content">
+          <div
+            style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; align-content: center; padding-left: 0.4rem;padding-right: 0.4rem; height: fit-content;">
+            <div
+              style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 600; font-size: large;">
+              ANYWHERE DOOR</div>
+            <div id="close">
+                <a href="Index.html" style="text-decoration: none; color:black; font-size:250% padding-top=0rem margin=0">&times;</a>
+            </div>
+          </div>
+    
+          <div class="form-box">
+            <div class="button-box">
+              <div id="btn1"></div>
+              <button type="button" class="toggle-button" onclick="login()">Login</button>
+              <button type="button" class="toggle-button" onclick="register()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+              <img src="home/fb.png" alt="facebook">
+              <img src="home/g+.png" alt="google">
+            </div>
+            <div class="loginform">
+              <form id="login" action="/register" method="post">
+                <div class="txt-field">
+                  <input type="text" required>
+                  <span></span>
+                  <label>Username</label>
+    
+                </div>
+                <div class="txt-field">
+                  <input type="password" required>
+                  <span></span>
+                  <label>Password</label>
+                </div>
+                <input type="checkbox" name="condition"> <label for="condition" style="color:#a8dadc; font-size: 18px; font-weight: 200;"> Remember
+                  Me</label>
+    <BR></BR>
+                <div class="pass">Forgot Password</div>
+                <input type="submit" value="login">
+                <div class="signup">Not a member? <button onclick="register()">Sign Up</button></div>
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <!-- modal by me -->
+      <div class="login-modal2">
+        <!-- white area -->
+        <div class="modal-content">
+          <div
+            style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; align-content: center; padding-left: 0.4rem;padding-right: 0.4rem; height: fit-content;">
+            <div
+              style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 600; font-size: large;">
+              ANYWHERE DOOR</div>
+            <div id="close">
+                <a href="Index.html" style="text-decoration: none; color:black; font-size:250% padding-top=0rem margin=0">&times;</a>
+            </div>
+          </div>
+    
+          <div class="form-box">
+            <div class="button-box">
+              <div id="btn2"></div>
+              <button type="button" class="toggle-button" onclick="login()">Login</button>
+              <button type="button" class="toggle-button" onclick="register()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+              <img src="home/fb.png" alt="facebook">
+              <img src="home/g+.png" alt="google">
+            </div>
+            <!-- signup -->
+            <div class="signupform">
+              <form id="signup" action="/register" method="post">
+                <div class="txt-field">
+                  <input type="text" name="name" required>
+                  <span></span>
+                  <label>Name</label>
+    
+                </div>
+                <div class="txt-field">
+                  <input type="email" name="email" required>
+                  <span></span>
+                  <label>Email ID</label>
+    
+                </div>
+                <div class="txt-field">
+                  <input type="text" name="username" required>
+                  <span></span>
+                  <label>Username</label>
+    
+                </div>
+                <div class="txt-field">
+                  <input type="password" name="password" required>
+                  <span></span>
+                  <label>Password</label>
+                </div>
+                <input type="checkbox" name="condition" required> <label for="condition" style="color:#a8dadc; font-size: 18px; font-weight: 200;"> I agree to
+                  terms &amp; conditions.</label> <BR></BR>
+                  <button id="signupbutton">Sign Up</button>
+                <!-- <input type="submit" value="Sign Up"> -->
+                <br> <br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        
+        var a = document.querySelector('.login-modal1');
+        var b = document.querySelector('.login-modal2');
+        function register() {
+           
+          a.style.display = 'none';
+          b.style.display = 'flex';
+    
+        }
+        function login() {
+          
+          b.style.display = 'none';
+          a.style.display = 'flex';
+        }
+    
+      </script>
+</body>
+</html>

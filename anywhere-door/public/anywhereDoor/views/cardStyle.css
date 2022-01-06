@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Josefin Slab', serif;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(home/rock.jpg),center no-repeat;
+}
+
+#home{
+    color: aliceblue; font-size: large; font-weight: 400; float: right; margin-right: 2rem; margin-top: 2rem;
+    text-decoration: none;
+}
+#home:hover{
+    transform: scale(1.5);
+    transition: 0.4s ease-out;
+    text-decoration:dotted;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(home/rock.jpg),center no-repeat; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+}
+.card1{
+    width: 320px;
+    height: 450px;
+    /* margin-right: 120px; */
+    position: relative;
+    perspective: 1000px;
+}
+.card2{
+    width: 320px;
+    height: 450px;
+    margin-right: 100px;
+    margin-left: 100px;
+    position: relative;
+    perspective: 1000px;
+}
+.card3{
+    width: 320px;
+    height: 450px;
+    /* margin-left: 100px; */
+    position: relative;
+    perspective: 1000px;
+    /* overflow: hidden; */
+}
+.sides{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(home/rock1.jpg), no-repeat;
+    background-size: cover;
+    background-position-x: 0;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    transition: transform 1s;
+}
+.right-side{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(home/rock1.jpg), no-repeat;
+    background-size: cover;
+    background-position-x: -140px;
+    transform: rotateY(0deg);
+    transform-origin: right;
+    transition: transform 1s;
+}
+.back-side1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/IMG20210222184714.jpg),center no-repeat;
+    background-size: cover;
+    background-position-x: 34%;
+    box-shadow: 50px 50px 100px #000;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s,box-shadow 2s;
+}
+.back-side2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/vaibhav.png),no-repeat;
+    background-size:cover;
+    background-position-x: 80%;
+    /* background-repeat: no-repeat; */
+    /* background-image: url(vaibhav1.png); */
+    box-shadow: 50px 50px 100px #000;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s,box-shadow 2s;
+}
+.back-side3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/yash_photo.jpeg),center,no-repeat;
+    background-size: cover;
+    box-shadow: 50px 50px 100px #000;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s,box-shadow 2s;
+}
+.card1:hover .left-side{
+    transform: rotateY(-360deg);
+}
+.card2:hover .left-side{
+    transform: rotateY(-360deg);
+}
+.card3:hover .left-side{
+    transform: rotateY(-360deg);
+}
+.card1:hover .right-side{
+    transform: rotateY(360deg);
+}
+.card2:hover .right-side{
+    transform: rotateY(360deg);
+}
+.card3:hover .right-side{
+    transform: rotateY(360deg);
+}
+.card1:hover .back-side1{
+    transform: translateZ(0);
+    z-index:1;
+    box-shadow: 50px 50px 100px #000;
+}
+.card2:hover .back-side2{
+    transform: translateZ(0);
+    z-index:1;
+    box-shadow: 50px 50px 100px #000;
+}
+.card3:hover .back-side3{
+    transform: translateZ(0);
+    z-index:1;
+    box-shadow: 50px 50px 100px #000;
+}
+.name{
+    color: white;
+    font-size: 35px;
+    margin: 20px 5px;
+}
+.name1{
+    color: white;
+    font-size: 35px;
+    margin: 20px 5px;
+}
+.profession{
+    color: #eee;
+    font-size: 20px;
+    margin: 20px 5px;
+}
+.left-side .name , .left-side .profession{
+    text-align: right;
+}
+.left-side .name1{
+    text-align: right;
+    padding-right:3.7%;
+}
+.biography{
+    color: white;
+    font-size: 22px;
+    background-color: rgba(0,0,0,0.5);
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}

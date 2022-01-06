@@ -1,0 +1,117 @@
+.view {
+    /* //whole screen is 75-76rem */
+    width: 22rem;
+    height: 22rem;
+    margin: 1rem;
+    /* float: left; */
+    border: 0.2rem solid pink;
+    overflow: visible;     
+     /* <--this is when hover the content move out of view--> */
+    position: relative;
+    text-align: center;
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgb(207, 88, 108);
+    /* cursor: default; */
+    /* background:rgb(4219,127,8)  no-repeat center center; */
+    background-color: white;
+}
+.view span{
+    font-size: 1.2rem;
+}
+.view .mask, .view .content {
+    width: 20rem;
+    height: 20rem;
+    /* may be inherit */
+    /* width: auto;
+    height: auto; */
+    position: absolute;
+    /* to make it over image */
+    overflow: hidden;
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+}
+.view img {
+    display: block;
+    position: relative;
+    width: 21rem; 
+    height: 21rem; 
+    top: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    border-radius: 12px;
+    transition: all 0.2s linear;
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    background: rgba(0, 0, 0, 0.8);
+    /* margin: 20px 0 0 0; */
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    position: relative;
+    color: #fff;
+    /* font-weight: 600; */
+    /* padding: 10px 20px 20px; */
+    padding: 0.6rem 1.2rem 1.2rem;
+    text-align: center;
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    /* padding: 7px 14px; */
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 2rem grey;
+}
+.view a.info:hover {
+    box-shadow: 0 0 5rem white;
+}
+.view .mask {
+    opacity: 0;
+    background-color: rgba(219,127,8, 0.7); 
+    /* background-color: rgba(29,127,8, 0.7);  */
+    transition: all 0.4s ease-in-out;
+}
+.view h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view p { 
+    font-size: medium;
+    transform: translateY(100px);
+    opacity: 0;
+	transition: all 0.2s linear;
+}
+.view a.info{
+    opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.view:hover img { 
+	transform: scale(1.1);
+} 
+.view:hover .mask { 
+	opacity: 1;
+}
+.view:hover h2,
+.view:hover p,
+.view:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view:hover p {
+    transition-delay: 0.3s;
+}
+.view:hover a.info {
+    transition-delay: 0.2s;
+}
