@@ -1,1 +1,1 @@
-mongodb+srv://anywheredoor:aniketvaibhavyash@cluster0.text9.mongodb.net/RegisteredUsers?retryWrites=true&w=majority
+mongodb+srv://anywheredoor:aniketvaibhavyash@cluster0.text9.mongodb.net/test?retryWrites=true&w=majority
