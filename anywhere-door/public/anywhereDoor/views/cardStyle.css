@@ -4,7 +4,7 @@
 }
 body{
     font-family: 'Josefin Slab', serif;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(home/rock.jpg),center no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(Home/rock.jpg),center no-repeat;
 }
 
 #home{
@@ -61,7 +61,7 @@ body{
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(home/rock1.jpg), no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(Home/rock1.jpg), no-repeat;
     background-size: cover;
     background-position-x: 0;
     transform: rotateY(0deg);
@@ -74,7 +74,7 @@ body{
     right: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(home/rock1.jpg), no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(Home/rock1.jpg), no-repeat;
     background-size: cover;
     background-position-x: -140px;
     transform: rotateY(0deg);
@@ -90,7 +90,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/IMG20210222184714.jpg),center no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(Home/IMG20210222184714.jpg),center no-repeat;
     background-size: cover;
     background-position-x: 34%;
     box-shadow: 50px 50px 100px #000;
@@ -107,7 +107,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/vaibhav.png),no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(Home/vaibhav.png),no-repeat;
     background-size:cover;
     background-position-x: 80%;
     /* background-repeat: no-repeat; */
@@ -126,7 +126,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(home/yash_photo.jpeg),center,no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(Home/yash_photo.jpeg),center,no-repeat;
     background-size: cover;
     box-shadow: 50px 50px 100px #000;
     z-index: -1;
