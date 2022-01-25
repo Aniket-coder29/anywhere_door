@@ -20,10 +20,10 @@ app.set('view engine','ejs')
 app.set("views",static_path)
 
 app.get('/',(req,res)=>{
-    if(!req.session.loginuser)
+    // if(!req.session.loginuser)
     res.render("index")
-    else
-    res.render("index_l")
+    // else
+    // res.render("index_l")
 })
 // app.get('/signup',(req,res)=>{
 //     res.render("signup")
