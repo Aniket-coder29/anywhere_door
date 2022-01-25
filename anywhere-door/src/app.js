@@ -86,21 +86,7 @@ app.get("/animation",(req,res)=>{
 app.post("/feedback",(req,res)=>{
     res.status(201).render("index")
 })
-// app.post("/search",(req,res)=>{
-//     const locationsearch=req.body.location;
-//     var coordinates = {};
-//     https.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=geometry%2Cplace_id&input=${locationsearch}&inputtype=textquery&key=AIzaSyD3vzfOkhjDHCQwz_apjEhT21KhvHDq2-k`, (res)=>{
-//         const locations = res.candidates;
-//         locations.forEach(e => {
-//             var placeId = e.place_id;
-//             const destLong = e.geometry.location.lng;
-//             const destLat = e.geometry.location.lat;
-//             coordinates.placeId = {destLat,destLong};
-//         });
-//         console.log(coordinates);
-//         res.render("animation",{destLong,destLat,eloc});
-//     })
-// })
+
 app.listen(port,()=>{
     console.log(`Listening to port ${port}`)
 })
